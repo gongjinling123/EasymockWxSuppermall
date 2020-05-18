@@ -1,0 +1,39 @@
+/* pages/category/category.wxss */
+page{
+  height: 100%;
+}
+.cate_container{
+  height: 100vh;
+  display: flex;
+}
+.left_menu{
+  flex: 2;
+  /* background: green; */
+}
+.menu_item{
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #dedede;
+  border-right: 1rpx solid #dedede;
+}
+.active{
+  color: #ff5777;
+}
+.right_content{
+  flex: 5;
+}
+.category_item{
+  width: 30%;
+  height: 180rpx;
+  float: left;
+  margin: 30rpx 8rpx;
+}
+.category_item image{
+  width: 100%;
+}
+.category_item .title{
+  font-size: 30rpx;
+  text-align: center;
+  color: #333;
+}

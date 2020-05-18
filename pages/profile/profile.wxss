@@ -1,0 +1,116 @@
+page{
+  background: #edece8;
+}
+.user_info_wrap{
+  height: 45vh;
+  background: #ff5777;
+  overflow: hidden;
+}
+.user_img_wrap{
+  position: relative;
+}
+.img_big{
+  filter: blur(18rpx);
+  height: 50vh;
+  width: 100%;
+}
+.user_info{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 110rpx;
+  text-align: center;
+}
+.user_icon{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.nick_name{
+  margin-top: 30rpx;
+  color: #fff;
+}
+button{
+  width: 40%;
+  margin-top: 150rpx;
+}
+
+.content{
+  position: relative;
+}
+.main{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  top: -30rpx;
+}
+.history_wrap{
+  background: #fff;
+  display: flex;
+}
+.history_wrap navigator{
+  flex: 1;
+  padding: 10rpx 0;
+  text-align: center;
+  font-size: 30rpx;
+}
+.history_wrap .his_num{
+  color: #ff5777;
+}
+
+.order_wrap{
+  background: #fff;
+  margin-top: 30rpx;
+}
+.order_title{
+  margin: 10rpx;
+  padding-left: 12rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.order_content{
+  display: flex;
+}
+.order_content navigator{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10rpx 0;
+  font-size: 30rpx;
+}
+.order_icon image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 10rpx;
+}
+.address_wrap{
+  background: #fff;
+  margin-top: 30rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding-left: 20rpx;
+}
+.app_info_wrap{
+  background: #fff;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50rpx;
+}
+.app_info_item{
+  padding-left: 20rpx;
+  flex: 1;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1rpx solid #ccc;
+  display: flex;
+}
+.app_info_item text{
+  flex: 1;
+  justify-content: space-around;
+}

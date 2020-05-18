@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "w-goods": "/components/w-goods/w-goods"
+    
+  },
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "商品详情"
+}

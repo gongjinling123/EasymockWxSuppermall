@@ -1,0 +1,14 @@
+<!--components/w-swiper.wxml-->
+<view class="index_swiper">
+  <swiper
+  autoplay
+  circular
+  indicator-dots>
+    <swiper-item
+    wx:for="{{banner}}"
+    wx:key="index"
+    >
+      <image mode="widthFix" src="{{item.image}}"></image>
+    </swiper-item>
+  </swiper>
+</view>

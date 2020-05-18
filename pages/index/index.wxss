@@ -1,0 +1,26 @@
+.goods{
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-evenly;
+}
+.goods .item{
+  width: 46%;
+  position: relative;
+}
+
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.backtop{
+  position: fixed;
+  right: 30rpx;
+  bottom: 100rpx;
+}
+.backtop image{
+  width: 80rpx;
+  height: 80rpx;
+}

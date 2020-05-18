@@ -1,0 +1,31 @@
+<!-- 轮播图 -->
+<w-swiper banner="{{banner}}"/>
+
+<!-- 推荐 -->
+<w-recommend recommend="{{recommend}}" bind:imageload="handleImageLoad"/>
+
+<!-- 流行 新款 精选 -->
+<w-tab title="{{titles}}"
+       id="tab-control"
+       bind:itemclick="handleTabClick"
+       class="{{isTabFixed?'fixed':''}}"/>
+<w-tab title="{{titles}}" 
+       bind:itemclick="handleTabClick"
+       wx:if="{{isTabFixed}}" 
+       />
+ 
+<!-- 商品数据 -->
+<!-- <w-goods goods="{{goods[currentType].list}}"/>  -->
+<view class="goods">
+<block wx:for="{{goods[currentType].list}}" wx:key="index">
+<w-goods-item data-iid="{{item.iid}}" bind:tap="detail" class="item" item="{{item}}"/>
+</block>
+</view>
+
+
+
+
+<!-- 返回顶部 -->
+<view class="backtop" wx:if="{{showBackTop}}" bind:tap="goTo">
+<image src="/icon/backtop.png"/>
+</view>

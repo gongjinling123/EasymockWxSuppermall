@@ -1,0 +1,52 @@
+/* pages/collect/collect.wxss */
+
+.tab{
+  font-size: 30rpx;
+}
+.collect_main{
+  background: #f3f4f6;
+}
+.collect_title{
+  padding: 20rpx 0;
+}
+.collect_tips{  
+  background: #fff;
+  padding: 15rpx 20rpx;
+  border: 1rpx solid #ccc;
+  margin: 20rpx; 
+}
+.active{
+  color:#ff5777;
+  border: 1rpx solid #ff5777;
+}
+.collect_content{
+
+}
+.collect_items{
+  display: flex;
+  padding: 30rpx;
+  margin: 30rpx 0;
+  background: #fff;
+}
+.collect_items .img{
+  flex: 1;
+}
+.img image{
+  width: 70%;
+}
+.collect_items .text{
+  flex: 3;
+} 
+.text .title{
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  font-size: 30rpx;
+}
+.text .price{
+  margin-top: 40rpx;
+  color: #ff5777;
+}

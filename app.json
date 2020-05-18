@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/cart/cart",
+    "pages/profile/profile",
+    "pages/index_detail/index_detail",
+    "pages/pay/pay",
+    "pages/login/login",
+    "pages/collect/collect"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ff5777",
+    "navigationBarTitleText": "购物街",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icon/home.png",
+        "selectedIconPath": "icon/_home.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "icon/category.png",
+        "selectedIconPath": "icon/_category.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "icon/cart.png",
+        "selectedIconPath": "icon/_cart.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "icon/profile.png",
+        "selectedIconPath": "icon/_profile.png"
+      }
+    ],
+    "color": "#000000",
+    "selectedColor": "#ff5777"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

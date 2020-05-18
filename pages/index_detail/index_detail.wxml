@@ -1,0 +1,129 @@
+
+<!-- 轮播图 -->
+  <swiper
+  autoplay
+  circular
+  indicator-dots>
+    <swiper-item
+    wx:for="{{goods.banner}}"
+    wx:key="index"
+    >
+      <image src="{{item}}"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 商品title -->
+<view class="top_info">
+  <view class="title">{{goods.title}}</view>
+  <view class="collect" bindtap="handleCollect">
+    <image class="img" mode="widthFix" src="/icon/{{isCollect?'shoucang1':'shoucang'}}.png"/>
+    <view>收藏</view>
+  </view>
+</view>
+
+  <view class="price_row">
+  <text class="new_price">￥{{goods.newPrice}}</text>
+  <text class="old_price">{{goods.oldPrice}}</text>
+  <text class="dazhe" wx:if="{{discountDesc}}">{{goods.discountDesc}}</text>
+  </view>
+
+<view class="shop">
+<view class="logo">
+  <image mode="widthFix" src="{{shopLogo}}"/>
+  <text class="shop_name">{{shopName}}</text>
+</view>
+<view class="shop_info">
+<view class="num">
+  <view class="sells">
+    <view class="sells_num">{{cSells}} </view>
+    <view class="sells_title">总销量</view>
+  </view>
+  <view class="goods">
+    <view class="goods_num">{{cGoods}}</view>
+    <view class="goods_title">全部宝贝</view>
+  </view>
+</view>
+<view class="shop_desc">
+<block wx:for="{{score}}" wx:key="index">
+<view class="desc">
+<text class="name">{{item.name}}</text>
+<text class="score">{{item.score}}</text>
+<text class="better {{item.isBetter ? 'bg1' : 'bg2'}}">{{item.isBetter?'高':'低'}}</text>
+</view>
+</block>
+</view>
+</view>
+</view>
+
+<!-- 穿着效果 -->
+<view class="show" wx:if="{{desc}}">{{desc}}</view>
+<view class="show_title">{{descKey}}</view>
+<view class="show_img">
+<block wx:for="{{detailImage}}" wx:key="index">
+<image mode="widthFix" src="{{item}}"></image>
+</block>
+</view>
+
+<!-- 评论 -->
+<view class="pinglun">
+  <view class="kehu">
+     <view class="kehu_info">
+      <image mode="widthFix" wx:if="{{rate.user_avatar}}" src="{{rate.user_avatar}}"/>
+      <text>{{rate.user_uname}}</text>
+    </view>
+    <view class="comment">{{rate.content}}</view>
+    <block wx:for="{{rate.images}}" wx:key="index">
+      <image mode="widthFix" src="{{item}}"/>
+    </block>
+    <view class="style">{{rate.style}}</view>
+  </view>
+<view class="shangjia">
+{{rate.explain}}
+</view>
+</view>
+
+<!-- 推荐 -->
+<view class="goods">
+<block wx:for="{{recommend}}" wx:key="index">
+<view class="goods-item">
+<image class="img" mode="widthFix" src="{{item.image}}"/>
+<view class="desc-info">
+<view class="title recommend_title">{{item.title}}</view>
+<view class="info">
+<text class="price">￥{{item.price}}</text>
+<image class="icon" src="/icon/shoucang.png"/>
+<text class="cfav">{{item.cfav}}</text>
+</view>
+</view>
+</view>
+</block>
+</view>
+
+<!-- 底部工具栏 -->
+<view class="btm_tool">
+  <view class="tool_item">
+    <image mode="widthFix" src="/icon/kefu.png"></image>
+    <text>客服</text>
+    <button open-type="contact"></button>
+  </view>
+    <view class="tool_item">
+    <image mode="widthFix" src="/icon/fenxiang.png"></image>
+    <text>分享</text>
+    <button open-type="share"></button>
+  </view>
+  <navigator url="/pages/cart/cart" open-type="switchTab" class="tool_item">
+    <image mode="widthFix" src="/icon/cart.png"></image>
+    <text>购物车</text>
+  </navigator>
+  <view class="tool_item btm_cart" bindtap="handleCartAdd">
+    加入购物车
+  </view>
+  <view class="tool_item btm_buy">
+    立即购买
+  </view>
+</view>
+
+<!-- 返回顶部 -->
+<view class="backtop" wx:if="{{showBackTop}}" bind:tap="goTo">
+<image src="/icon/backtop.png"/>
+</view>

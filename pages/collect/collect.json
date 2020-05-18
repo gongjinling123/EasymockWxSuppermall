@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "w-tab": "/components/w-tab/w-tab"
+  },
+  "navigationBarTitleText": "商品收藏"
+}
