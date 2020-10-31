@@ -39,8 +39,8 @@ Page({
 // 右侧内容
   _getSubcategory(maitKey) {
     getSubcategory(maitKey).then(res => {
-        // console.log(res.data.data)
-      const category=res.data.data.list
+        console.log(res,'分类')
+      const category=res.data.requestDetail.data.list
       this.setData({
         category
       })

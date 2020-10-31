@@ -15,7 +15,6 @@
        />
  
 <!-- 商品数据 -->
-<!-- <w-goods goods="{{goods[currentType].list}}"/>  -->
 <view class="goods">
 <block wx:for="{{goods[currentType].list}}" wx:key="index">
 <w-goods-item data-iid="{{item.iid}}" bind:tap="detail" class="item" item="{{item}}"/>

@@ -50,9 +50,9 @@ onShow:function(){
    // --------------------发送网络请求--------------------------
   _getIndexDetail(iid){
     getIndexDetail(iid).then(res => {
-      // console.log(res)
-      const result=res.data.result
-      const iid=res.data.iid
+      console.log(res,'详情页')
+      const result=res.data.requestDetail.result
+      const iid=res.data.requestDetail.iid
       const checked=true
       const banner=result.itemInfo.topImages
       const img=banner[0]
@@ -174,7 +174,7 @@ this.setData({
       // console.log('还没登录')
       wx.showToast({
         icon:'none',
-        title: '还没登录',
+        title: '还没登录', 
         mask:true,
         duration:2000
       })

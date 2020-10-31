@@ -39,23 +39,23 @@ Page({
   // ----------------------网络请求函数---------------------------
   _getMultiData(){
     getMultiData().then(res => {
-      // console.log(res)
+      console.log(res,'轮播图')
       const banner = res.data.data.banner.list
       const recommend = res.data.data.recommend.list
       this.setData({
         banner,
-        recommend
+        recommend 
       })
-    }) 
+    })  
   },
   _getGoodsData(type){
     // 获取页码
     const page=this.data.goods[type].page+1
     // 发送网络请求
     getGoodsData(type,page).then(res => {
-      // console.log(res)
+      console.log(res.data.requestDetail,'商品列表')
       // 获取数据
-      const list=res.data.data.list
+      const list=res.data.requestDetail.data.list
       // 将数据设置到type的list中
       const oldList=this.data.goods[type].list
       oldList.push(...list)

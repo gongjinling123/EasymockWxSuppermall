@@ -10,7 +10,7 @@ export function getMultiData(){
 // 商品数据
 export function getGoodsData(type,page){
   return request({
-    url: '/home/data',
+    url: '/home/data/new1',
     data: {
       type,
       page
